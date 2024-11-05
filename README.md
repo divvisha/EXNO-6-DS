@@ -141,7 +141,13 @@ hm=sns.heatmap(data=data, annot=True)
 hm=sns.heatmap(data=data)
 ~~~
 ![image](https://github.com/user-attachments/assets/bb9cd9f7-d751-4568-b246-556a166a0bb3)
-
+~~~
+tips=sns.load_dataset("tips")
+numeric_cols=tips.select_dtypes (include=np.number).columns 
+corr=tips [numeric_cols].corr()
+sns.heatmap(corr, annot=True, cmap="plasma", linewidths=0.5)
+~~~
+![image](https://github.com/user-attachments/assets/4cc8afee-7014-4daf-a727-9e438d585162)
 
 # Result:
   Thus Data Visualization using seaborn python library for the given datas was executed successfully.
